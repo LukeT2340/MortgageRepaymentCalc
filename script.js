@@ -11,19 +11,22 @@ document.getElementById('mortgage-amount').addEventListener('input', function (e
     e.target.value = value;
 });
 
+// Clear all values
 document.getElementById('clear-all-button').addEventListener('click', function (e) {
     document.getElementById('mortgage-amount').value = null
     document.getElementById('mortgage-term').value = null
     document.getElementById('interest-rate').value = null
-
+    document.getElementById('no-results-right-side').classList.remove('hidden');
+    document.getElementById('results-right-side').classList.add('hidden')
 });
+
 
 document.getElementById('form').addEventListener('submit', function (e) {
     e.preventDefault();
 
     // Get and process the values from the form
     let mortgageAmount = parseFloat(document.getElementById('mortgage-amount').value.replace(/,/g, ''));
-    let mortgageTerm = parseFloat(document.getElementById('mortgage-term').value) * 12; // Convert years to months
+    let mortgageTerm = parseFloat(document.getElementById('mortgage-term').value) * 12; 
     let annualInterestRate = parseFloat(document.getElementById('interest-rate').value) / 100;
     let monthlyInterestRate = annualInterestRate / 12;
 
