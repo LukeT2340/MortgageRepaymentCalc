@@ -16,42 +16,64 @@
                 <h1 id="title">Mortgage Calculator</h1>
                 <button id="clear-all-button">Clear All</button>
             </div>
-            <form class="form">
+            <form id="form" class="form">
                 <section>
                     <label class="input-label">Mortgage Amount</label>
                     <div class="input-box">
                         <p class="symbol-left">£</p>
-                        <input type="text"></input>
+                        <input type="text" id="mortgage-amount"></input>
                     </div>
                 </section>
                 <div class="inline-flex">
                     <section>
                         <label class="input-label">Mortgage Term</label>
                         <div class="input-box">
-                            <input type="text"></input>
+                            <input type="number" id="mortgage-term"></input>
                             <p class="symbol-right">years</p>
                         </div>
                     </section>
                     <section>
                         <label class="input-label">Interest Rate</label>
                         <div class="input-box">
-                            <input type="text"></input>
+                            <input type="number" id="interest-rate" step="0.01"></input>
                             <p class="symbol-right">%</p>
                         </div>
                     </section>
                 </div>
                 <section>
                     <label class="input-label">Mortgage Type</label>
-                    <input type="radio" id="repayment" name="option" value="repayment">
+                    <input type="radio" id="repayment" name="option" value="repayment" checked>
                     <label class="radio-option" for="repayment">Repayment</label>
                     <input type="radio" id="investment" name="option" value="investment">
                     <label class="radio-option" for="investment">Investment</label>
                 </section>
+                <button type="submit" id="calculate-button">
+                    <img src="icon-calculator.svg"></img>
+                    <p>Calculate Repayments</p>
+                </button>
             </form>
         </div>
-        <div class="size-half">
-
+        <div id="results-right-side" class="size-half right-side hidden">
+            <h1 id="results-label">
+                Your results
+            </h1>
+            <p id="results-info">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+            <div class="results-background">
+                <div class="results-inner-container">
+                    <p>Your monthly repayments</p>
+                    <h1 id="monthly-repayment">£0</h1>
+                    <div class="custom-br"></div>
+                    <p>Total you'll repay over the term</p>
+                    <p id="total-repayment">£0</p>
+                </div>
+            </div>
+        </div>
+        <div id="no-results-right-side" class="size-half right-side center text-center">
+            <img src="illustration-empty.svg"></img>
+            <h2 id="results-shown-here-text">Results shown here</h2>
+            <p id="no-results-text">Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
