@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="size-half left-side">
+            <div class="justify-between">
+                <h1 id="title">Mortgage Calculator</h1>
+                <button id="clear-all-button">Clear All</button>
+            </div>
+            <form class="form">
+                <section>
+                    <label class="input-label">Mortgage Amount</label>
+                    <div class="input-box">
+                        <p class="symbol-left">£</p>
+                        <input type="text"></input>
+                    </div>
+                </section>
+                <div class="inline-flex">
+                    <section>
+                        <label class="input-label">Mortgage Term</label>
+                        <div class="input-box">
+                            <input type="text"></input>
+                            <p class="symbol-right">years</p>
+                        </div>
+                    </section>
+                    <section>
+                        <label class="input-label">Interest Rate</label>
+                        <div class="input-box">
+                            <input type="text"></input>
+                            <p class="symbol-right">%</p>
+                        </div>
+                    </section>
+                </div>
+                <section>
+                    <label class="input-label">Mortgage Type</label>
+                    <input type="radio" id="repayment" name="option" value="repayment">
+                    <label class="radio-option" for="repayment">Repayment</label>
+                    <input type="radio" id="investment" name="option" value="investment">
+                    <label class="radio-option" for="investment">Investment</label>
+                </section>
+            </form>
+        </div>
+        <div class="size-half">
+
+        </div>
+    </div>
+</body>
+</html>
