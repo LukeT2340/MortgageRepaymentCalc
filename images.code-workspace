@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "images",
+			"path": "../../Downloads/mortgage-repayment-calculator-main/assets/images"
+		},
+		{
+			"name": "MortgageCalc",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
